@@ -3,7 +3,12 @@ const cors = require('cors')
 const multer = require('multer')
 
 const app = express()
-app.use(cors())
+app.use(cors({
+  origin:["https://vercel.com/rana-adeels-projects/simple-multer-fw18"],
+  methods:["POST","GET","DELETE"],
+  credentials:true
+}))
+// app.use(cors())
 app.use(express.json())
 
 const storage = multer.diskStorage({
@@ -23,6 +28,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
   res.status(200).json({message:'completed at last'})
 })
 
-app.listen(3001, () => {
+// app.listen(3001, () => {
+app.listen("https://multer-backend-pink.vercel.app", () => {
   console.log("Server is running")
 })
