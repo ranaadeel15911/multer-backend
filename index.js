@@ -28,6 +28,9 @@ app.post('/upload', upload.single('file'), (req, res) => {
   console.log(req.file)
   res.status(200).json({message:'completed at last'})
 })
+app.get("/",(req,resp)=>{
+  resp.send("API is running ...")
+  })
 
 // app.listen(3001, () => {
 app.listen("https://multer-backend-pink.vercel.app", () => {
