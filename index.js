@@ -8,6 +8,7 @@ app.use(cors({
   methods:["POST","GET","DELETE"],
   credentials:true
 }))
+const PORT = 'https://multer-backend-pink.vercel.app'
 // app.use(cors())
 app.use(express.json())
 
