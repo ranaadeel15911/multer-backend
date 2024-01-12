@@ -33,6 +33,3 @@ app.get("/",(req,resp)=>{
   })
 
 // app.listen(3001, () => {
-app.listen("https://multer-backend-pink.vercel.app", () => {
-  console.log("Server is running")
-})
